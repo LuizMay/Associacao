@@ -109,7 +109,7 @@ public class ClienteDaoImpl implements Serializable {
         String consulta = "SELECT * FROM cliente WHERE nome LIKE ?";
         Cliente cliente = null;
         List<Cliente> clientes = new ArrayList<>();
-        try {
+        try {System.out.println("teste GitHub");
             conexao = FabricaConexao.abrirConexao();
             preparando = conexao.prepareStatement(consulta);
             preparando.setString(1, "%" + nome + "%");  
